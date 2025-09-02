@@ -9,10 +9,10 @@ const ProgressTracker = ({ label, current, total, status }: ProgressTrackerProps
   const percentage = (current / total) * 100;
   
   return (
-    <div className="bg-surface p-6 rounded border border-border">
+    <div className="bg-surface p-4 sm:p-6 rounded border border-border">
       <div className="flex items-center justify-between mb-3">
         <span className="text-sm font-medium text-text-secondary lowercase">{label}</span>
-        <span className="text-sm text-text-muted">
+        <span className="text-xs sm:text-sm text-text-muted">
           day {current}/{total}
         </span>
       </div>
@@ -25,7 +25,7 @@ const ProgressTracker = ({ label, current, total, status }: ProgressTrackerProps
       </div>
       
       {status && (
-        <div className="text-sm text-text-secondary">
+        <div className="text-xs sm:text-sm text-text-secondary">
           status: <span className="text-accent lowercase">{status}</span>
         </div>
       )}

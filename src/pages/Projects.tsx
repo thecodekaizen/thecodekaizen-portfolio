@@ -58,41 +58,41 @@ const Projects = () => {
 
   return (
     <div className="min-h-screen pt-20 pb-16">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Header */}
-        <div className="py-content">
-          <h1 className="text-5xl md:text-6xl font-light text-text-primary mb-8 lowercase leading-tight">
+        <div className="py-8 sm:py-content">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-light text-text-primary mb-6 sm:mb-8 lowercase leading-tight">
             projects
           </h1>
           
-          <p className="text-xl text-text-secondary font-light mb-16 max-w-2xl">
+          <p className="text-lg sm:text-xl text-text-secondary font-light mb-12 sm:mb-16 max-w-2xl">
             a collection of builds, experiments, and lessons learned
           </p>
         </div>
         
         {/* Project Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-section">
+        <div className="grid gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-3 mb-8 sm:mb-section">
           {projects.map((project, index) => (
             <div 
               key={index}
-              className="group bg-surface border border-border rounded p-6 hover:bg-hover transition-smooth cursor-pointer"
+              className="group bg-surface border border-border rounded p-4 sm:p-6 hover:bg-hover transition-smooth cursor-pointer"
             >
               <div className="flex items-start justify-between mb-4">
-                <span className="text-2xl">{getTypeIcon(project.type)}</span>
-                <span className={`text-xs px-2 py-1 rounded lowercase ${getStatusColor(project.status)}`}>
+                <span className="text-xl sm:text-2xl">{getTypeIcon(project.type)}</span>
+                <span className={`text-xs px-2 py-1 rounded lowercase whitespace-nowrap ${getStatusColor(project.status)}`}>
                   {project.status}
                 </span>
               </div>
               
-              <h3 className="text-lg font-medium text-text-primary mb-2 lowercase group-hover:text-accent transition-smooth">
+              <h3 className="text-base sm:text-lg font-medium text-text-primary mb-2 lowercase group-hover:text-accent transition-smooth leading-tight">
                 {project.title}
               </h3>
               
-              <p className="text-text-secondary mb-4 text-sm">
+              <p className="text-text-secondary mb-4 text-sm leading-relaxed">
                 {project.description}
               </p>
               
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-1.5 sm:gap-2">
                 {project.tech.map((tech, techIndex) => (
                   <span 
                     key={techIndex}
@@ -107,41 +107,41 @@ const Projects = () => {
         </div>
         
         {/* Divider */}
-        <div className="w-full h-px bg-border my-section"></div>
+        <div className="w-full h-px bg-border my-8 sm:my-section"></div>
         
         {/* Build Philosophy */}
-        <div className="py-section">
-          <h2 className="text-2xl font-medium text-text-primary mb-8 lowercase">
+        <div className="py-8 sm:py-section">
+          <h2 className="text-xl sm:text-2xl font-medium text-text-primary mb-6 sm:mb-8 lowercase">
             build philosophy
           </h2>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid gap-6 sm:gap-8 md:grid-cols-3">
             <div className="text-center">
-              <div className="text-4xl mb-4">⚡</div>
-              <h3 className="text-lg font-medium text-text-primary mb-3 lowercase">
+              <div className="text-3xl sm:text-4xl mb-4">⚡</div>
+              <h3 className="text-base sm:text-lg font-medium text-text-primary mb-3 lowercase">
                 ship fast
               </h3>
-              <p className="text-text-secondary text-sm">
+              <p className="text-text-secondary text-sm leading-relaxed">
                 perfect is the enemy of good. get it out there, then iterate.
               </p>
             </div>
             
             <div className="text-center">
-              <div className="text-4xl mb-4">📚</div>
-              <h3 className="text-lg font-medium text-text-primary mb-3 lowercase">
+              <div className="text-3xl sm:text-4xl mb-4">📚</div>
+              <h3 className="text-base sm:text-lg font-medium text-text-primary mb-3 lowercase">
                 learn publicly
               </h3>
-              <p className="text-text-secondary text-sm">
+              <p className="text-text-secondary text-sm leading-relaxed">
                 document the process, share the failures, celebrate the wins.
               </p>
             </div>
             
             <div className="text-center">
-              <div className="text-4xl mb-4">🔄</div>
-              <h3 className="text-lg font-medium text-text-primary mb-3 lowercase">
+              <div className="text-3xl sm:text-4xl mb-4">🔄</div>
+              <h3 className="text-base sm:text-lg font-medium text-text-primary mb-3 lowercase">
                 embrace kaizen
               </h3>
-              <p className="text-text-secondary text-sm">
+              <p className="text-text-secondary text-sm leading-relaxed">
                 small, continuous improvements over massive overhauls.
               </p>
             </div>

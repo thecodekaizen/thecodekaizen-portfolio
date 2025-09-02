@@ -8,30 +8,30 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen pt-20 pb-16">
-      <div className="max-w-4xl mx-auto px-6">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6">
         {/* Header */}
-        <div className="py-content">
-          <h1 className="text-5xl md:text-6xl font-light text-text-primary mb-8 lowercase leading-tight">
+        <div className="py-8 sm:py-content">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-light text-text-primary mb-6 sm:mb-8 lowercase leading-tight">
             contact
           </h1>
           
-          <p className="text-xl text-text-secondary font-light mb-16 max-w-2xl">
+          <p className="text-lg sm:text-xl text-text-secondary font-light mb-12 sm:mb-16 max-w-2xl">
             let's connect, collaborate, or just say hi.
           </p>
         </div>
         
         {/* Contact Links */}
-        <div className="grid md:grid-cols-2 gap-6 mb-section max-w-2xl">
+        <div className="grid gap-4 sm:gap-6 md:grid-cols-2 mb-8 sm:mb-section max-w-2xl">
           {links.map((link, index) => (
             <a
               key={index}
               href={link.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group bg-surface border border-border rounded p-6 hover:bg-hover transition-smooth"
+              className="group bg-surface border border-border rounded p-4 sm:p-6 hover:bg-hover transition-smooth touch-manipulation"
             >
               <div className="flex items-center justify-between">
-                <span className="text-lg text-text-primary lowercase group-hover:text-accent transition-smooth">
+                <span className="text-base sm:text-lg text-text-primary lowercase group-hover:text-accent transition-smooth">
                   {link.platform}
                 </span>
                 <span className="text-text-muted text-sm group-hover:text-accent transition-smooth">
@@ -43,46 +43,46 @@ const Contact = () => {
         </div>
         
         {/* Divider */}
-        <div className="w-full h-px bg-border my-section"></div>
+        <div className="w-full h-px bg-border my-8 sm:my-section"></div>
         
         {/* Collaboration */}
-        <div className="py-section">
-          <h2 className="text-2xl font-medium text-text-primary mb-8 lowercase">
+        <div className="py-8 sm:py-section">
+          <h2 className="text-xl sm:text-2xl font-medium text-text-primary mb-6 sm:mb-8 lowercase">
             open to
           </h2>
           
           <div className="space-y-6 max-w-2xl">
-            <div className="flex items-start gap-4">
-              <div className="w-2 h-2 bg-accent rounded-full mt-3"></div>
+            <div className="flex items-start gap-3 sm:gap-4">
+              <div className="w-2 h-2 bg-accent rounded-full mt-2 sm:mt-3 shrink-0"></div>
               <div>
-                <h3 className="text-lg font-medium text-text-primary mb-2 lowercase">
+                <h3 className="text-base sm:text-lg font-medium text-text-primary mb-2 lowercase">
                   weekend project collaborations
                 </h3>
-                <p className="text-text-secondary">
+                <p className="text-text-secondary text-sm sm:text-base">
                   building mvps, exploring new tech, or just having fun with code
                 </p>
               </div>
             </div>
             
-            <div className="flex items-start gap-4">
-              <div className="w-2 h-2 bg-accent rounded-full mt-3"></div>
+            <div className="flex items-start gap-3 sm:gap-4">
+              <div className="w-2 h-2 bg-accent rounded-full mt-2 sm:mt-3 shrink-0"></div>
               <div>
-                <h3 className="text-lg font-medium text-text-primary mb-2 lowercase">
+                <h3 className="text-base sm:text-lg font-medium text-text-primary mb-2 lowercase">
                   mentorship exchanges
                 </h3>
-                <p className="text-text-secondary">
+                <p className="text-text-secondary text-sm sm:text-base">
                   sharing knowledge, learning from others, growing together
                 </p>
               </div>
             </div>
             
-            <div className="flex items-start gap-4">
-              <div className="w-2 h-2 bg-accent rounded-full mt-3"></div>
+            <div className="flex items-start gap-3 sm:gap-4">
+              <div className="w-2 h-2 bg-accent rounded-full mt-2 sm:mt-3 shrink-0"></div>
               <div>
-                <h3 className="text-lg font-medium text-text-primary mb-2 lowercase">
+                <h3 className="text-base sm:text-lg font-medium text-text-primary mb-2 lowercase">
                   casual conversations
                 </h3>
-                <p className="text-text-secondary">
+                <p className="text-text-secondary text-sm sm:text-base">
                   about tech, productivity, habits, or anything interesting
                 </p>
               </div>
@@ -91,8 +91,8 @@ const Contact = () => {
         </div>
         
         {/* Note */}
-        <div className="py-section">
-          <div className="bg-accent-muted p-6 rounded border border-accent">
+        <div className="py-8 sm:py-section">
+          <div className="bg-accent-muted p-4 sm:p-6 rounded border border-accent">
             <p className="text-accent text-sm">
               <strong>note:</strong> i try to respond within 24-48 hours. if you don't hear back, 
               feel free to follow up — sometimes messages get lost in the digital void.
