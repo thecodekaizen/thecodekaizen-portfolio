@@ -18,6 +18,29 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@lovable_dev" />
     <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <base href="/thecodekaizen-portfolio/">
+    <script type="text/javascript">
+      // Prefix root-absolute links with the project path when hosted as a project page
+      (function() {
+        var projectBase = '/thecodekaizen-portfolio';
+        function prefixLink(link) {
+          try {
+            var url = new URL(link.href, window.location.origin);
+            if (url.origin === window.location.origin && url.pathname.indexOf(projectBase + '/') !== 0 && url.pathname !== projectBase) {
+              if (url.pathname.indexOf('/') === 0) {
+                link.setAttribute('href', projectBase + url.pathname + (url.search || '') + (url.hash || ''));
+              }
+            }
+          } catch (e) {}
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+          var anchors = document.getElementsByTagName('a');
+          for (var i = 0; i < anchors.length; i++) {
+            prefixLink(anchors[i]);
+          }
+        });
+      })();
+    </script>
     <script type="text/javascript">
       // Single Page Apps for GitHub Pages redirect handler
       (function(l) {
